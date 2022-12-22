@@ -1,46 +1,67 @@
-@use "./variables" as *;
+@use "variables" as *;
 
-.category-gallery{
-    display:flex;
+.categoryGallery {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width:100%;
-    .item{
-        flex-basis:40%;
+    width: 100%;
+    .items {
+        flex-basis: 40%;
         padding: 45px;
+        margin: 50px 25px 25px;
         border-radius: 10%;
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items:center;
-        margin: 50px 25px 25px;
-        img{
-            /*Images by default show up with their original size*/
-            max-width:100%;
+        align-items: center;
+        text-align: center;
+        img { 
+            max-width: 100%;
             border-radius: 10%;
             margin-bottom: 20px;
         }
-        &:hover{
+        &:hover {
             transform: scale(0.95);
         }
-        &:focus{
-            transform: scale(0.95);
-        }
-    }
 
-    .item-one{
-        /*calling the variables on their own requires (the use as *) */
+        &:focus {
+            transform: scale(0.95);
+        }
+   
+    }
+    .itemOne {
         background-color: $quinary;
     }
-    .item-two{
+    .itemTwo {
         background-color: $secondary;
     }
-    .item-three{
+    .itemThree {
         background-color: $tertiary;
     }
-    .item-four{
+    .itemFour {
         background-color: $quaternary;
     }
-
+    
 }
+
+.play {
+    background-image: url(../assets/background-image.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  
+    .playContainer {
+      max-width: 650px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 70px 45px;
+      border: 24px solid $secondary;
+      background-color: $solidWhite;
+    }
+  }
+  

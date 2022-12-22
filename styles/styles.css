@@ -8,7 +8,12 @@ body {
   margin: 0;
 }
 
-article, aside, footer, header, nav, section {
+article,
+aside,
+footer,
+header,
+nav,
+section {
   display: block;
 }
 
@@ -17,7 +22,9 @@ h1 {
   margin: 0.67em 0;
 }
 
-figcaption, figure, main {
+figcaption,
+figure,
+main {
   display: block;
 }
 
@@ -49,15 +56,19 @@ abbr[title] {
           text-decoration: underline dotted;
 }
 
-b, strong {
+b,
+strong {
   font-weight: inherit;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bolder;
 }
 
-code, kbd, samp {
+code,
+kbd,
+samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -75,7 +86,8 @@ small {
   font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -90,7 +102,8 @@ sup {
   top: -0.5em;
 }
 
-audio, video {
+audio,
+video {
   display: inline-block;
 }
 
@@ -107,31 +120,46 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
 
-button, input {
+button,
+input {
   overflow: visible;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
 }
 
-button, html [type=button], [type=reset], [type=submit] {
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -158,13 +186,15 @@ textarea {
   overflow: auto;
 }
 
-[type=checkbox], [type=radio] {
+[type=checkbox],
+[type=radio] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
 
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -173,7 +203,8 @@ textarea {
   outline-offset: -2px;
 }
 
-[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -182,7 +213,8 @@ textarea {
   font: inherit;
 }
 
-details, menu {
+details,
+menu {
   display: block;
 }
 
@@ -202,14 +234,9 @@ template {
   display: none;
 }
 
-html {
+* {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .sr-only {
@@ -228,6 +255,23 @@ html {
 
 /* site fonts */
 /* site colours */
+/* import Jakarta Sans font */
+@font-face {
+  font-family: "Jakarta Sans";
+  src: url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff"), url("../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Regular.ttf"), url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff2");
+  font-weight: normal;
+}
+/* import Jakarta Sans font in bold */
+@font-face {
+  font-family: "Jakarta Sans";
+  src: url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff"), url(../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff2), url(../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Bold.ttf);
+  font-weight: bold;
+}
+/* import Young Serif font */
+@font-face {
+  font-family: "Young Serif";
+  src: url("../fonts/youngserif/YoungSerif-Regular.otf");
+}
 html {
   /* if we set our root element font-size to 125%, then 1 rem = 20px */
   font-size: 125%;
@@ -239,7 +283,11 @@ body {
   color: #084b6d;
 }
 
-h1, h2, h3, h4, blockquote {
+h1,
+h2,
+h3,
+h4,
+blockquote {
   font-family: "Young Serif";
   font-weight: normal;
   color: #084b6d;
@@ -281,14 +329,17 @@ p {
   line-height: 1.5rem;
   margin: 0 0 30px 0;
 }
-p.small-copy {
+p.smallCopy {
   font-size: 0.6rem;
   line-height: 1.2rem;
   font-weight: bold;
   margin: 0;
 }
 
-ul, li, a, input {
+ul,
+li,
+a,
+input {
   padding: 0;
   margin: 0;
 }
@@ -305,13 +356,258 @@ a {
   transition: 0.3s;
 }
 
+/* Once again, we need to import our variables partial in this file, and prefix variables with 'variables.: */
 .wrapper {
   max-width: 1260px;
   width: 90%;
   margin: 0 auto;
 }
 
-.category-gallery {
+button {
+  color: #084b6d;
+  background-color: transparent;
+  padding: 18px 36px;
+  border: 2px solid #084b6d;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /* style the button in the main nav menu to look just like an icon */
+}
+button:hover {
+  background-color: #084b6d;
+  color: #fff;
+}
+button:focus {
+  background-color: #084b6d;
+  color: #fff;
+}
+button.secondary {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  padding: 8px 12px;
+}
+button.secondary:hover {
+  background-color: #fff;
+  color: #084b6d;
+}
+button.secondary:focus {
+  background-color: #fff;
+  color: #084b6d;
+}
+button.solid {
+  color: #fff;
+  background-color: #084b6d;
+}
+button.solid:hover {
+  color: #084b6d;
+  background-color: #fff;
+}
+button.menuIcon {
+  display: inherit;
+  padding: 0;
+  border: none;
+}
+button.menuIcon:hover {
+  background-color: transparent;
+}
+button.menuIcon:focus {
+  background-color: transparent;
+}
+
+a.button {
+  color: #084b6d;
+  background-color: transparent;
+  padding: 18px 36px;
+  border: 2px solid #084b6d;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+a.button:hover {
+  background-color: #084b6d;
+  color: #fff;
+}
+a.button:focus {
+  background-color: #084b6d;
+  color: #fff;
+}
+
+header {
+  background-color: #f8fbf3;
+  margin-bottom: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+header .headerImgContainer {
+  width: 45%;
+}
+header .headerImgContainer img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+header .headerContent {
+  width: 55%;
+  color: #084b6d;
+}
+header .headerContent .contentContainer {
+  margin: 0 auto;
+  width: 65%;
+}
+
+footer {
+  background-color: #084b6d;
+  color: #fff;
+  padding: 90px 0 50px 0;
+}
+footer .footerFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 90px;
+}
+footer .footerFlexContainer h4 {
+  color: #fff;
+}
+footer .footerNav {
+  width: 40%;
+}
+footer .footerNav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footerNav nav ul {
+  width: 33%;
+}
+footer .footerNav nav a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+footer .footerNav nav a:hover {
+  color: white;
+}
+footer .footerNav nav a:focus {
+  color: white;
+}
+
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(8, 75, 109, 0.08);
+  background-color: #fff;
+}
+.navBar .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+}
+.navBar .searchCart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navBar .searchCart .searchIcon,
+.navBar .searchCart .bag {
+  margin-right: 15px;
+}
+.navBar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navBar .logo {
+  margin-left: 60px;
+}
+.navBar .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navBar .counter p {
+  width: 24px;
+  height: 24px;
+  background-color: #084b6d;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.slideOutNav {
+  padding: 35px 50px;
+  border-right: 1px solid #f4fcff;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: 100vh;
+  background-color: #084b6d;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+.slideOutNav .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.slideOutNav .buttonContainer button {
+  padding: 10px 0 10px 20px;
+}
+.slideOutNav .mainMenu a {
+  font-family: "Young Serif";
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: white;
+}
+.slideOutNav .mainMenu a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slideOutNav .mainMenu a:focus {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.categoryGallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,10 +621,11 @@ a {
           align-items: center;
   width: 100%;
 }
-.category-gallery .item {
+.categoryGallery .items {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   padding: 45px;
+  margin: 50px 25px 25px;
   border-radius: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,41 +640,113 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 50px 25px 25px;
+  text-align: center;
 }
-.category-gallery .item img {
-  /*Images by default show up with their original size*/
+.categoryGallery .items img {
   max-width: 100%;
   border-radius: 10%;
   margin-bottom: 20px;
 }
-.category-gallery .item:hover {
+.categoryGallery .items:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
-.category-gallery .item:focus {
+.categoryGallery .items:focus {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
-.category-gallery .item-one {
-  /*calling the variables on their own requires (the use as *) */
+.categoryGallery .itemOne {
   background-color: #ffd698;
 }
-.category-gallery .item-two {
+.categoryGallery .itemTwo {
   background-color: #f4fcff;
 }
-.category-gallery .item-three {
+.categoryGallery .itemThree {
   background-color: #f8fbf3;
 }
-.category-gallery .item-four {
+.categoryGallery .itemFour {
   background-color: #fff5f5;
 }
 
-/*I want this to look good on small computers*/
+.play {
+  background-image: url(../assets/background-image.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+.play .playContainer {
+  max-width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70px 45px;
+  border: 24px solid #f4fcff;
+  background-color: #fff;
+}
+
 @media (max-width: 1000px) {
-  .item p {
-    font-size: 0.8rem;
+  /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+  footer .footerFlexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 100px;
+  }
+  footer .footerFlexContainer .logo {
+    margin-bottom: 30px;
+  }
+  footer .footerNav {
+    width: 80%;
+  }
+  footer .footerNav nav ul {
+    width: auto;
   }
 }
-/*I want this to look good on tablets*/
-/*I want this to look good on phones*/
+@media (max-width: 800px) {
+  /* all of our styles for TABLET devices will go within this breakpoint */
+}
+@media (max-width: 500px) {
+  /* all of our styles for MOBILE devices will go within this breakpoint */
+  .slideOutNav {
+    width: 100%;
+  }
+  .slideOutNav .mainMenu a {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  footer .footerFlexContainer {
+    margin-bottom: 60px;
+  }
+  footer .footerNav nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  footer .footerNav nav ul {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+}
